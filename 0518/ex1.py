@@ -18,7 +18,7 @@ def random_num(num):
 #                 index = j
 #                 array[j+1]=array[j]
 #                 array[index] = tmp
-#         print(array)
+#     return(array)
 def insert_sort(array):
     for i in range(1, len(array)):
         tmp = array[i]
