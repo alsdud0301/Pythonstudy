@@ -10,15 +10,24 @@ def random_num(num):
                 break
     return array
 
+# def insert_sort(array):
+#     for i in range(1,len(array)):
+#         tmp = array[i]
+#         for j in range(0,i-1):
+#             if tmp < array[j]:
+#                 index = j
+#                 array[j+1]=array[j]
+#                 array[index] = tmp
+#         print(array)
 def insert_sort(array):
-    for i in range(1,len(array)):
+    for i in range(1, len(array)):
         tmp = array[i]
-        for j in range(i-1,-1,-1):
+        for j in range(0, i):
             if tmp < array[j]:
-                index = j
-                array[j+1]=array[j]
-                array[index] = tmp
-        print(array)
+                array[j + 1:i + 1] = array[j:i]
+                array[j] = tmp
+                break
+    return array
 
-insert_sort(random_num(10))
+print(insert_sort(random_num(10)))
 
